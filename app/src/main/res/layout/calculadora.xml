@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="409dp"
+        android:layout_height="386dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clear"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="440dp">
+
+            <Button
+                android:id="@+id/button1"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="103dp"
+                android:layout_height="96dp"
+                android:onClick="onClick"
+                android:text="1" />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="103dp"
+                android:layout_height="match_parent"
+                android:onClick="onClick"
+                android:text="2" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="103dp"
+                android:layout_height="match_parent"
+                android:onClick="onClick"
+                android:text="3" />
+
+            <Button
+                android:id="@+id/buttonDiv"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="103dp"
+                android:layout_height="match_parent"
+                android:text="/" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="103dp"
+                android:layout_height="96dp"
+                android:onClick="onClick"
+                android:text="4" />
+
+            <Button
+                android:id="@+id/button5"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="onClick"
+                android:text="5" />
+
+            <Button
+                android:id="@+id/button6"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="onClick"
+                android:text="6" />
+
+            <Button
+                android:id="@+id/buttonMulti"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="*" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button7"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="103dp"
+                android:layout_height="96dp"
+                android:onClick="onClick"
+                android:text="7" />
+
+            <Button
+                android:id="@+id/button8"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="onClick"
+                android:text="8" />
+
+            <Button
+                android:id="@+id/button9"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="onClick"
+                android:text="9" />
+
+            <Button
+                android:id="@+id/buttonResta"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="-" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="138dp">
+
+            <Button
+                android:id="@+id/buttonPunto"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="96dp"
+                android:text="." />
+
+            <Button
+                android:id="@+id/button0"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="onClick"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/buttonResultado"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="=" />
+
+            <Button
+                android:id="@+id/buttonSuma"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="+" />
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        android:textAlignment="textEnd"
+        android:textColor="#FFFFFF"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/clear"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="187dp"
+        android:layout_height="77dp"
+        android:text="CLEAR"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <CheckBox
+        android:id="@+id/checkBoxOpciones"
+        android:layout_width="0dp"
+        android:layout_height="68dp"
+        android:background="#000000"
+        android:backgroundTint="#000000"
+        android:text="Mostrar opciones deshabilitar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+    <RadioGroup
+        android:id="@+id/opciones"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxOpciones"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/desSuma"
+            android:layout_width="82dp"
+            android:layout_height="match_parent"
+            android:text="Suma"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/desResta"
+            android:layout_width="82dp"
+            android:layout_height="match_parent"
+            android:text="Resta"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/desMulti"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Multiplicación"
+            android:textColor="#FFFFFF" />
+
+        <RadioButton
+            android:id="@+id/desDiv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="División"
+            android:textColor="#FFFFFF" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
