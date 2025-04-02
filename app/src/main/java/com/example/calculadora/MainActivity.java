@@ -13,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private Button clear;
@@ -46,6 +48,18 @@ public class MainActivity extends AppCompatActivity {
         operacionTextView =findViewById(R.id.textView);
         primerPunto=false;
         segundoPunto=false;
+        if (savedInstanceState != null) {
+            String textoTextView=savedInstanceState.getString("texto");
+            operacionTextView.setText(textoTextView);
+            suma=savedInstanceState.getBoolean("booleanSuma");
+            resta=savedInstanceState.getBoolean("booleanResta");
+            multiplicacion=savedInstanceState.getBoolean("booleanMulti");
+            division=savedInstanceState.getBoolean("booleanDiv");
+            primerPunto=savedInstanceState.getBoolean("booleanPrimerPunto");
+            segundoPunto=savedInstanceState.getBoolean("booleanSegundoPunto");
+            primerNum=savedInstanceState.getDouble("primerNum");
+            segundoNum=savedInstanceState.getDouble("segundoNum");
+        }
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -215,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(@NonNull Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putSerializable("textView", (Serializable) operacionTextView);
+        outState.putSerializable("texto", operacionTextView.getText().toString());
         outState.putSerializable("booleanSuma",suma);
         outState.putSerializable("booleanResta",resta);
         outState.putSerializable("booleanMulti",multiplicacion);
